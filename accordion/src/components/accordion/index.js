@@ -50,15 +50,21 @@ export default function Accordion(){
                     <h3>{dataItem.question}</h3>
                     <span>  + </span> </div>
 
-                    {selected === dataItem.id 
-                    ? 
-                     <div className="content"> {dataItem.answer} 
+                    {
+                    enableMutliSelect ?
+                    multiple.indexOf(dataItem.id) !== -1 && (
+                        <div className="content"> {dataItem.answer}</div>
+                    )
+                    :
+                    selected === dataItem.id && (
+                        <div className="content"> {dataItem.answer}</div>
+                    )}
                      </div>
-                    : null}
-                    </div>) 
-                    
-                    : <div> No Data found</div>
-            }
+                )
+                :(
+                <div> No Data found !</div>
+            
+            )}
         </div>
     </div>
 }

@@ -14,10 +14,12 @@
 }
 
 .item{
-    background-color: aquamarine;
+    background-color: rgb(73, 68, 131);
     margin-bottom: 10px;
     padding: 10px 20px;
     border-radius: 20px;
+    /* color: #ffffff; */
+    font-weight: 700;
 }
 
 span{
